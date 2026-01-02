@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import YearlyChart from "../Components/YearlyChart";
 import ExpenseTable from "../Components/ExpenseTable";
-import "../styles/dashboard.css";
+import '../Styles/dashboard.css'
 import AddExpenseModal from "../Components/AddExpenseModel";
 import { getExpenses } from "../apiServices/expenseService";
 
