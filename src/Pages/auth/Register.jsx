@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import "../../styles/auth.css";
+import "../../Styles/auth.css";
 import { useState } from "react";
 import { registerUser } from "../../apiServices/authService";
 import toast from "react-hot-toast";
