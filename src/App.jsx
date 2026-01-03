@@ -51,6 +51,10 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* Catch all wrong routes */}
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
     </BrowserRouter>
   );
