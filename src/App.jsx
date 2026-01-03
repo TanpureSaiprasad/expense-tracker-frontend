@@ -6,6 +6,8 @@ import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/Profile";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import AuthRedirect from "./Components/AuthRedirect";
+import NotFound from "./Pages/NotFound";
+
 
 function App() {
   return (
