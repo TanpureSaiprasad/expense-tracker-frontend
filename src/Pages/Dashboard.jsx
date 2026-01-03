@@ -149,7 +149,7 @@ function Dashboard() {
 
          {/* INFO */}
         {(isYearSelected && selectedMonth === null) && (
-          <p className="info-text">Please select a month to view data</p>
+          <p className="info-text">Please click on bar to view monthly expenses</p>
         )}
 
         {/* MONTH TABLE */}
