@@ -1,0 +1,159 @@
+/* ===== CHART SECTION ===== */
+.chart-section {
+  margin-top: 30px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.chart-section h3 {
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+/* ===== YEAR CHART ===== */
+.year-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 260px;
+  padding: 38px 10px 20px; /* extra bottom */
+  border-left: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+
+  overflow-x: auto;
+  overflow-y: visible; 
+}
+
+
+/* ===== MONTH BAR ===== */
+.month-bar {
+  flex: 1;
+  display: flex;
+  height: 100%; 
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ===== BAR WRAPPER ===== */
+.bar-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: visible; 
+}
+
+
+/* ===== BAR ===== */
+.bar-fill {
+  width: 22px;
+  background: linear-gradient(180deg, #5148f8, #797cff);
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.bar-fill:hover {
+  background: linear-gradient(180deg, #4338ca, #4f46e5);
+}
+
+/* ===== MONTH LABEL ===== */
+.month-bar span {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #000000;
+}
+
+/* ===== TOOLTIP ===== */
+.bar-tooltip {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Show tooltip on hover */
+.bar-fill:hover .bar-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.bar-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #111827 transparent transparent transparent;
+}
+
+
+/* ================= RESPONSIVE YEARLY CHART ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .year-chart {
+    height: 220px;
+    padding: 8px;
+    padding-top: 38px;
+  }
+
+  .bar-fill {
+    width: 18px;
+  }
+
+  .month-bar span {
+    font-size: 11px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .chart-section {
+    padding: 16px;
+  }
+
+  /* Enable horizontal scroll */
+  .year-chart {
+    height: 200px;
+    overflow-x: auto;
+    gap: 14px;
+    padding-bottom: 10px;
+  }
+
+  /* Prevent bars from shrinking */
+  .month-bar {
+    min-width: 40px;
+  }
+
+  .bar-fill {
+    width: 14px;
+    border-radius: 4px;
+  }
+
+  .month-bar span {
+    font-size: 10px;
+  }
+
+  /* Tooltip slightly smaller */
+  .bar-tooltip {
+    font-size: 11px;
+    padding: 3px 6px;;
+  }
+}
+
+
